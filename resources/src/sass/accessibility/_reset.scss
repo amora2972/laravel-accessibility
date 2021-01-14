@@ -1,0 +1,58 @@
+html > body > .accessibility {
+  z-index: 999999;
+  font-size: 16px;
+  position: absolute;
+
+  :focus {
+    outline: none;
+  }
+
+  * {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  a {
+    color: #000000;
+    text-decoration: none;
+  }
+
+  button {
+    border: none;
+    color: #000000;
+    cursor: pointer;
+    background: transparent;
+    -webkit-appearance: none;
+
+    i {
+      font-size: 2rem;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  span.keyboard {
+    display: inline-block;
+    vertical-align: middle;
+
+    kbd {
+      display: inline-block;
+      border: .2em solid;
+      border-radius: .3em;
+      color: #000000;
+      border-color: #ddd #bbb #777 #999;
+      background-color: #fff !important;
+      font-family: monospace;
+      background-image: linear-gradient(to bottom left,#eee,#fff,#eee);
+      padding: .1em .3em;
+      font-weight: 400;
+      vertical-align: bottom;
+    }
+  }
+
+
+}

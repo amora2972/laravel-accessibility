@@ -103,7 +103,7 @@ class AssetService
         $config = [
             'locale' => config('app.locale'),
             'features' => config('accessibility.features'),
-            'translates' => trans('accessibility::global'),
+            'translates' => trans('accessibility'),
             'quickNavigation' => config('accessibility.quickNavigation', false),
         ];
 

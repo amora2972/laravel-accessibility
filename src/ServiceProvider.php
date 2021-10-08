@@ -38,15 +38,11 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
 
         $this->publishes([__DIR__ . '/../config/accessibility.php' => config_path('accessibility.php')], 'config');
 
-        // Escape case plugin is disabled
-        if (!$this->app['accessibility']->isEnabled())
-            return;
-
         // Append routes for assets providing
         $this->appendAssetsRoutes();
 
         $kernel = $this->app[Kernel::class];
-        $kernel->pushMiddleware(InjectMenu::class);
+        $kernel->appendMiddlewareToGroup('web', InjectMenu::class);
     }
 
     /**
